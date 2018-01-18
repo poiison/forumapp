@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace forumapp.repository.repository
+namespace forumapp.entity.db
 {
-    class RepositoyPost
+    public class dbPost
     {
     }
 }

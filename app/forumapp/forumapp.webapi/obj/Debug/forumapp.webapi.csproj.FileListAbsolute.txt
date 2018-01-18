@@ -200,3 +200,11 @@ C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\Microsoft.AI.Web.
 C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\obj\Debug\forumapp.webapi.csprojResolveAssemblyReference.cache
 C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\obj\Debug\forumapp.webapi.dll
 C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\obj\Debug\forumapp.webapi.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\forumapp.business.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\forumapp.entity.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\forumapp.business.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\forumapp.entity.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\forumapp.repository.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\EntityFramework.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\forumapp.repository.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\EntityFramework.xml

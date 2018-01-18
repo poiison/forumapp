@@ -18,6 +18,15 @@ namespace forumapp.webapi
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
+
+            //disable XML formatting and return JSON all the time
+            var config = GlobalConfiguration.Configuration;            
+            var json = config.Formatters.JsonFormatter;
+
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }

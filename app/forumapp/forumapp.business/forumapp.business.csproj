@@ -40,8 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ibusiness\IBusinessBase.cs" />
+    <Compile Include="ibusiness\IBusinessPost.cs" />
     <Compile Include="irepositoy\IRepositoryBase.cs" />
+    <Compile Include="irepositoy\IRepositoryPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\BusinessBase.cs" />
+    <Compile Include="services\BusinessPost.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\forumapp.entity\forumapp.entity.csproj">
+      <Project>{7918a78e-fbdf-40aa-8a21-2611dd1ea2a1}</Project>
+      <Name>forumapp.entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

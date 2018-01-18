@@ -1,4 +1,5 @@
-﻿using System;
+﻿using forumapp.business.ibusiness;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,11 +12,20 @@ namespace forumapp.webapi.Controllers
     [RoutePrefix("post")]
     public class PostController : ApiController
     {
+        private readonly IBusinessPost _postBusiness;
+
+        public PostController(IBusinessPost postBusiness)
+        {
+            _postBusiness = postBusiness;
+        }
+
         [HttpGet]
-        [Route("posts")]
+        [Route("getposts")]
         public async Task<IHttpActionResult> GetPosts()
         {
-            return Ok();
+            var result = await _postBusiness.GetPostName();
+
+            return Ok(result);
         }
     }
 

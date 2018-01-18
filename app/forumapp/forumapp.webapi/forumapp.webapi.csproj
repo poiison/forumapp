@@ -284,6 +284,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\forumapp.business\forumapp.business.csproj">
+      <Project>{eeebf1e6-c161-4cd9-a630-9e537723d5a3}</Project>
+      <Name>forumapp.business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\forumapp.entity\forumapp.entity.csproj">
+      <Project>{7918a78e-fbdf-40aa-8a21-2611dd1ea2a1}</Project>
+      <Name>forumapp.entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\forumapp.repository\forumapp.repository.csproj">
+      <Project>{3a3fa79d-572a-435c-9c39-a9c7522913d2}</Project>
+      <Name>forumapp.repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

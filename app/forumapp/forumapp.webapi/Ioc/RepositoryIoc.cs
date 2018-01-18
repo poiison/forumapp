@@ -1,4 +1,6 @@
-﻿using Ninject;
+﻿using forumapp.business.irepositoy;
+using forumapp.repository.repository;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +16,8 @@ namespace forumapp.webapi.Ioc
         /// <param name="kernel"></param>
         public static void RegisterServices(IKernel kernel)
         {
-            //kernel.Bind(typeof(IRepositorioBase<>)).To(typeof(RepositorioBase<>));
-            //kernel.Bind<IRepositorioModelo>().To<RepositorioModelo>();
+            kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
+            kernel.Bind<IRepositoryPost>().To<RepositoryPost>();
         }
     }
 }
