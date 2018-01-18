@@ -17,7 +17,7 @@ namespace forumapp.webapi.Ioc
             //kernel.Bind(typeof(IRepositorioBase<>)).To(typeof(RepositorioBase<>));
             //kernel.Bind<IRepositorioModelo>().To<RepositorioModelo>();
 
-
+             
             //kernel.Bind<IRepo>().ToMethod(ctx => new Repo("Ninject Rocks!"));
         }
     }
