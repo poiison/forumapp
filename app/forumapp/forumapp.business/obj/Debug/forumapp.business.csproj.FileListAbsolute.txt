@@ -4,3 +4,8 @@ C:\projetos\ForumApp\app\forumapp\forumapp.business\obj\Debug\forumapp.business.
 C:\projetos\ForumApp\app\forumapp\forumapp.business\obj\Debug\forumapp.business.csproj.CoreCompileInputs.cache
 C:\projetos\ForumApp\app\forumapp\forumapp.business\obj\Debug\forumapp.business.dll
 C:\projetos\ForumApp\app\forumapp\forumapp.business\obj\Debug\forumapp.business.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.business\bin\Debug\forumapp.business.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.business\bin\Debug\forumapp.business.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.business\obj\Debug\forumapp.business.csprojResolveAssemblyReference.cache
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.business\obj\Debug\forumapp.business.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.business\obj\Debug\forumapp.business.pdb

@@ -4,3 +4,8 @@ C:\projetos\ForumApp\app\forumapp\forumapp.repository\obj\Debug\forumapp.reposit
 C:\projetos\ForumApp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.csproj.CoreCompileInputs.cache
 C:\projetos\ForumApp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.dll
 C:\projetos\ForumApp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.repository\bin\Debug\forumapp.repository.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.repository\bin\Debug\forumapp.repository.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.csprojResolveAssemblyReference.cache
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.pdb
