@@ -14,3 +14,16 @@ C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.repository\bin\Debug\EntityF
 C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.repository\bin\Debug\EntityFramework.SqlServer.xml
 C:\projetos\ForumApp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.csprojResolveAssemblyReference.cache
 C:\projetos\ForumApp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.csproj.CoreCompileInputs.cache
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\forumapp.repository.dll.config
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\forumapp.repository.dll
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\forumapp.repository.pdb
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\EntityFramework.dll
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\forumapp.business.dll
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\forumapp.entity.dll
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\forumapp.business.pdb
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\forumapp.entity.pdb
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\EntityFramework.xml
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.dll
+C:\projetos\ForumApp\app\forumapp\forumapp.repository\obj\Debug\forumapp.repository.pdb

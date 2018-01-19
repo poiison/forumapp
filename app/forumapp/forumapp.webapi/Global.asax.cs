@@ -19,8 +19,6 @@ namespace forumapp.webapi
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-
-
             //disable XML formatting and return JSON all the time
             var config = GlobalConfiguration.Configuration;            
             var json = config.Formatters.JsonFormatter;
