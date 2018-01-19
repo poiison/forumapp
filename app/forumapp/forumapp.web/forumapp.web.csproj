@@ -73,6 +73,8 @@
     <Content Include="app\components\login\loginCtrl.js" />
     <Content Include="app\components\main\main.html" />
     <Content Include="app\components\main\mainCtrl.js" />
+    <Content Include="app\components\post\post.html" />
+    <Content Include="app\components\post\postCtrl.js" />
     <Content Include="app\components\topic\topics.html" />
     <Content Include="app\components\topic\topicsCtrl.js" />
     <Content Include="css\bootstrap\bootstrap-theme.css" />

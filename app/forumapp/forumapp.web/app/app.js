@@ -15,10 +15,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: '/app/components/main/main.html',
             controller: 'mainCtrl'
         })
-        .state('threads', {
-            url: "/threads",
+        .state('topics', {
+            url: "/topics",
             templateUrl: '/app/components/topic/topics.html',
             controller: 'topicsCtrl'
+        })
+        .state('post', {
+            url: "/posts",
+            templateUrl: '/app/components/post/post.html',
+            controller: 'postCtrl'
         });
 
 });
