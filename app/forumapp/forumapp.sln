@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "forumapp.entity", "forumapp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "forumapp.repository", "forumapp.repository\forumapp.repository.csproj", "{3A3FA79D-572A-435C-9C39-A9C7522913D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "forumapp.web", "forumapp.web\forumapp.web.csproj", "{288D59A1-1E0D-4481-A088-AA9831A9BBD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3A3FA79D-572A-435C-9C39-A9C7522913D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A3FA79D-572A-435C-9C39-A9C7522913D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A3FA79D-572A-435C-9C39-A9C7522913D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288D59A1-1E0D-4481-A088-AA9831A9BBD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288D59A1-1E0D-4481-A088-AA9831A9BBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288D59A1-1E0D-4481-A088-AA9831A9BBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288D59A1-1E0D-4481-A088-AA9831A9BBD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
