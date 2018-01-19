@@ -17,8 +17,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('threads', {
             url: "/threads",
-            templateUrl: '/app/components/threads/threads.html',
-            controller: 'threadsCtrl'
+            templateUrl: '/app/components/topic/topics.html',
+            controller: 'topicsCtrl'
         });
 
 });
