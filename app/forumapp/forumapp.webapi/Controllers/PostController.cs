@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace forumapp.webapi.Controllers
 {
     [RoutePrefix("post")]
-    [AllowCors]
+    //[AllowCors]
     public class PostController : ApiController
     {
         private readonly IBusinessPost _postBusiness;

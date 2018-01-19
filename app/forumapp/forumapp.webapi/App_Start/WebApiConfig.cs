@@ -14,6 +14,7 @@ namespace forumapp.webapi
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
 
+            config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

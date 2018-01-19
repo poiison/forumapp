@@ -1,10 +1,9 @@
-C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\bin\Debug\forumapp.entity.dll
-C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\bin\Debug\forumapp.entity.pdb
-C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\obj\Debug\forumapp.entity.csprojResolveAssemblyReference.cache
-C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\obj\Debug\forumapp.entity.dll
-C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\obj\Debug\forumapp.entity.pdb
 C:\projetos\ForumApp\app\forumapp\forumapp.entity\bin\Debug\forumapp.entity.dll
 C:\projetos\ForumApp\app\forumapp\forumapp.entity\bin\Debug\forumapp.entity.pdb
 C:\projetos\ForumApp\app\forumapp\forumapp.entity\obj\Debug\forumapp.entity.csproj.CoreCompileInputs.cache
 C:\projetos\ForumApp\app\forumapp\forumapp.entity\obj\Debug\forumapp.entity.dll
 C:\projetos\ForumApp\app\forumapp\forumapp.entity\obj\Debug\forumapp.entity.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\bin\Debug\forumapp.entity.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\bin\Debug\forumapp.entity.pdb
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\obj\Debug\forumapp.entity.dll
+C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.entity\obj\Debug\forumapp.entity.pdb
