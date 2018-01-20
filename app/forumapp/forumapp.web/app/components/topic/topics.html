@@ -11,7 +11,7 @@
             <!-- Default panel contents -->
             <div class="panel-heading">FORUM APP</div>
             <div class="panel-body">
-                <a class="btn  btn-primary btn-outline"><i class="glyphicon glyphicon-plus"></i> <strong>New Topic</strong></a>
+                <a class="btn  btn-primary btn-outline" ng-click="openModalNewTopic()"><i class="glyphicon glyphicon-plus"></i> <strong>New Topic</strong></a>
             </div>
 
 
@@ -25,14 +25,50 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="align-td"><a ng-click="moveToThread()">Test </a><br /><small>Something not important</small></td>
+                        <tr ng-show="lsTopics != undefined  && lsTopics != null && lsTopics.length > 0" ng-repeat="tops in lsTopics">
+                            <td class="align-td">
+                                <strong>
+                                    <a class="uppercase" ng-click="goToTopics(tops.id)">{{ tops.name }} </a>
+                                    <a class="btn-sm" ng-click="deleteTopic()" ng-show="true" title="Delete"><i class="glyphicon glyphicon-remove-sign" style="color:red"></i></a>
+                                </strong>
+                            </td>
                             <td class="align-td">9875</td>
                             <td class="align-td">admin</td>
-                            
+
+                        </tr>
+                        <tr ng-show="lsTopics == undefined  || lsTopics == null || lsTopics.length == 0">
+                            <td colspan="2">
+                                <center>Not found.</center>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="mdl_newtopic" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content modal-gray">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">New Topic</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <label class="login-inputs" for="mdl_categoryName">Name</label>
+                        <input type="text" id="mdl_categoryName" class="form-control input-sm chat-input" placeholder="Name" ng-model="category.name" required />
+                        <br />
+                        <label class="login-inputs" for="mdl_categoryDescription">Description</label>
+                        <input type="text" id="mdl_categoryDescription" class="form-control input-sm chat-input" placeholder="Description" ng-model="category.description" required ng-minlength="3" />
+                        <br />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-outline" ng-click="createNewTopic()">Save</button>
+                    <button type="button" class="btn btn-secondary btn-outline" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>

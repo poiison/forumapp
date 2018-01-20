@@ -2,18 +2,53 @@
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
             <div class="form-login">
-                <h4>Welcome</h4>
-                <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username" />
-                </br>
-                <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
-                </br>
-                <div class="wrapper">
-                    <span class="group-btn">
-                        <a href="#" class="btn btn-primary btn-md" ng-click="login()">login <i class="fa fa-sign-in"></i></a>
-                    </span>
+                <form>
+                    <h4>Welcome</h4>
+                    <label class="login-inputs" for="userName">Username</label>
+                    <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="Username" />
+                    </br>
+                    <label class="login-inputs" for="userPassword">Password</label>
+                    <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="Password" />
+                    </br>
+                    <hr />
+                    <div class="wrapper">
+                        <span class="group-btn">
+                            <a class="btn btn-primary btn-md btn-outline" ng-click="Login()">Login</a>
+                            <a class="btn btn-warning btn-md btn-outline" ng-click="createNewUser()">Create New User</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="mdl_newuser" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content modal-gray">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">New User</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <label class="login-inputs"  for="mdl_userName">Username</label>
+                        <input type="text" id="mdl_userName" class="form-control input-sm chat-input" placeholder="Username" />
+                        <br />
+                        <label class="login-inputs"  for="mdl_userPassword">Password</label>
+                        <input type="text" id="mdl_userPassword" class="form-control input-sm chat-input" placeholder="Password" />
+                        <br />
+                        <label class="login-inputs" for="exampleInputPassword1">Permission</label>
+                        <select id="mdl_userRole" class="form-control input-sm chat-input">
+                            <option value="0">Admin</option>
+                            <option value="1">User</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-outline">Save</button>
+                    <button type="button" class="btn btn-secondary btn-outline" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

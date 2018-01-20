@@ -1,12 +1,13 @@
 ﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+
 body {
-  background-color:#fff;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    font: normal 14px Roboto,arial,sans-serif;
 }
 
-.top{
-	padding-top: 100px;
+.top {
+    padding-top: 100px;
 }
 
 .form-login {
@@ -16,16 +17,16 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 15px;
-    border-color:#d2d2d2;
+    border-color: #d2d2d2;
     border-width: 5px;
-    box-shadow:0 1px 0 #cfcfcf;
+    box-shadow: 0 1px 0 #cfcfcf;
 }
 
-h4 { 
- border:0 solid #fff; 
- border-bottom-width:1px;
- padding-bottom:10px;
- text-align: center;
+h4 {
+    border: 0 solid #fff;
+    border-bottom-width: 1px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 .form-control {
@@ -36,7 +37,13 @@ h4 {
     text-align: center;
 }
 
+.login-inputs {
+    font-size: 11px;
+}
 
+.modal-gray {
+    background-color: #EDEDED;
+}
 
 /*OUTLINE BTN*/
 .btn-outline {
@@ -65,16 +72,31 @@ h4 {
     color: #d9534f;
 }
 
-.btn-primary.btn-outline:hover,
-.btn-success.btn-outline:hover,
-.btn-info.btn-outline:hover,
-.btn-warning.btn-outline:hover,
-.btn-danger.btn-outline:hover {
-    color: #fff;
-}
+    .btn-primary.btn-outline:hover,
+    .btn-success.btn-outline:hover,
+    .btn-info.btn-outline:hover,
+    .btn-warning.btn-outline:hover,
+    .btn-danger.btn-outline:hover {
+        color: #fff;
+    }
 
 /* TABLE DEFAULT*/
 
 .align-td {
-    vertical-align:middle !important;
+    vertical-align: middle !important;
+}
+
+
+ /*FONTS*/
+
+a.uppercase {
+    text-transform: uppercase;
+}
+
+a.lowercase {
+    text-transform: lowercase;
+}
+
+a.capitalize {
+    text-transform: capitalize;
 }

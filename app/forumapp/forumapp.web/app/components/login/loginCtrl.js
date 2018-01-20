@@ -2,7 +2,12 @@
     'loginCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window','$state',
 function ($scope, $http, $rootScope, $log, $location, $window, $state) {
 
-    $scope.login = function () {
+    $scope.Login = function () {
         $state.go('main');
-    }
+    };
+
+    $scope.createNewUser = function () {
+        $('#mdl_newuser').modal('show');
+    };
+
 }]);

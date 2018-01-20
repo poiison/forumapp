@@ -10,7 +10,7 @@
             <!-- Default panel contents -->
             <div class="panel-heading">FORUM APP</div>
             <div class="panel-body">
-                <a class="btn  btn-primary btn-outline"><i class="glyphicon glyphicon-plus"></i> <strong>New Category</strong></a>
+                <a class="btn btn-primary btn-outline" ng-click="openModalNewCategory()"><i class="glyphicon glyphicon-plus"></i> <strong>New Category</strong></a>
             </div>
 
 
@@ -18,19 +18,54 @@
                 <table id="tbCategories" class="table table-striped table-condensed small table-hover table-text-middle">
                     <thead>
                         <tr>
-                            <th class="col-md-8">CATEGORIES</th>
+                            <th class="col-md-10">CATEGORIES</th>
                             <th class="col-md-2">TOPICS</th>
-                            <th class="col-md-2">REPLIES</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="align-td"><a ng-click="moveToThread()">Test </a><br /><small>Something not important</small></td>
-                            <td class="align-td">9875</td>
-                            <td class="align-td">789654123</td>
+                        <tr ng-show="lsCategories != undefined  && lsCategories != null && lsCategories.length > 0" ng-repeat="categs in lsCategories">
+                            <td class="align-td">
+                                <strong>
+                                    <a class="uppercase" ng-click="goToTopics(categs.id)">{{ categs.name }} </a>
+                                    <a class="btn-sm" ng-click="deleteCategory()" ng-show="true" title="Delete"><i class="glyphicon glyphicon-remove-sign" style="color:red"></i></a>
+                                </strong>
+                                <br />
+                                <small>{{ categs.description }}</small>
+                            </td>
+                            <td class="align-td">{{ categs.totaltopics }}</td>
+                        </tr>
+                        <tr ng-show="lsCategories == undefined  || lsCategories == null || lsCategories.length == 0">
+                            <td colspan="2">
+                                <center>Not found.</center>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="mdl_newcategory" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content modal-gray">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">New Category</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <label class="login-inputs" for="mdl_categoryName">Name</label>
+                        <input type="text" id="mdl_categoryName" class="form-control input-sm chat-input" placeholder="Name" ng-model="category.name" required />
+                        <br />
+                        <label class="login-inputs" for="mdl_categoryDescription">Description</label>
+                        <input type="text" id="mdl_categoryDescription" class="form-control input-sm chat-input" placeholder="Description" ng-model="category.description" required ng-minlength="3" />
+                        <br />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-outline" ng-click="createNewCategory()">Save</button>
+                    <button type="button" class="btn btn-secondary btn-outline" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
