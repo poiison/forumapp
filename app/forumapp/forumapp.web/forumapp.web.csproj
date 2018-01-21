@@ -77,6 +77,9 @@
     <Content Include="app\components\post\postCtrl.js" />
     <Content Include="app\components\topic\topics.html" />
     <Content Include="app\components\topic\topicsCtrl.js" />
+    <Content Include="app\config\config.js" />
+    <Content Include="app\config\error.js" />
+    <Content Include="app\service\services.js" />
     <Content Include="css\bootstrap\bootstrap-theme.css" />
     <Content Include="css\bootstrap\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap\bootstrap.css" />

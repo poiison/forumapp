@@ -18,6 +18,7 @@ namespace forumapp.webapi.Ioc
         {
             kernel.Bind(typeof(IBusinessBase<>)).To(typeof(BusinessBase<>));
             kernel.Bind<IBusinessPost>().To<BusinessPost>();
+            kernel.Bind<IBusinessCategory>().To<BusinessCategory>();
         }
     }
 }

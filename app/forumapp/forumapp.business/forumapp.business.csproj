@@ -42,10 +42,13 @@
   <ItemGroup>
     <Compile Include="ibusiness\IBusinessBase.cs" />
     <Compile Include="ibusiness\IBusinessPost.cs" />
+    <Compile Include="ibusiness\IBusinessCategory.cs" />
     <Compile Include="irepositoy\IRepositoryBase.cs" />
+    <Compile Include="irepositoy\IRepositoryCategory.cs" />
     <Compile Include="irepositoy\IRepositoryPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\BusinessBase.cs" />
+    <Compile Include="services\BusinessCategory.cs" />
     <Compile Include="services\BusinessPost.cs" />
   </ItemGroup>
   <ItemGroup>

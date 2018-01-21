@@ -11,6 +11,18 @@ namespace forumapp.webapi
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
+        void Application_BeginRequest(object sender, EventArgs e)
+        {
+            HttpContext.Current.Response.AddHeader("X-FRAME-OPTIONS", "SAMEORIGIN");
+
+            var app = sender as HttpApplication;
+            if (app != null && app.Context != null)
+            {
+                app.Context.Response.Headers.Remove("Server");
+            }
+        }
+
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

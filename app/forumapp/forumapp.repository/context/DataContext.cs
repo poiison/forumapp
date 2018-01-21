@@ -1,4 +1,6 @@
-﻿using System;
+﻿using forumapp.entity.db;
+using forumapp.repository.entityconfiguration;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,22 +11,18 @@ namespace forumapp.repository.context
 {
     public class DataContext : DbContext
     {
-        public DataContext() : base("conn")
+        public DataContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\projetos\ForumApp\app\forumapp\forumapp.repository\db\Database1.mdf;Integrated Security=True")
         {
             Database.SetInitializer<DataContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //Criação
-            //base.OnModelCreating(modelBuilder);
-
-            //Configuração
-            //modelBuilder.Configurations.Add(new ModelConfiguration());
+            modelBuilder.Configurations.Add(new CategoryConfiguration());
         }
 
         //Declaração dos Dbs Ses
-        //public DbSet<model> Model { get; set; }
+        public DbSet<dbCategory> Category { get; set; }
 
 
 
@@ -52,7 +50,7 @@ namespace forumapp.repository.context
             try
             {
                 if (_InnerTransaction == null)
-                    throw new InvalidOperationException("Transação não iniciada!");
+                    throw new InvalidOperationException("Transaction not started!");
 
                 _InnerTransaction.Commit();
 
@@ -78,7 +76,7 @@ namespace forumapp.repository.context
             try
             {
                 if (_InnerTransaction == null)
-                    throw new InvalidOperationException("Transação não iniciada!");
+                    throw new InvalidOperationException("Transaction not started!");
 
                 _InnerTransaction.Rollback();
             }

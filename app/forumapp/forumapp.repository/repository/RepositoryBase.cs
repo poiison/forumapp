@@ -16,7 +16,7 @@ namespace forumapp.repository.repository
         protected DataContext _context;
 
         /// <summary>
-        /// Construtor da Classe
+        /// Constructor
         /// </summary>
         public RepositoryBase()
         {
@@ -24,11 +24,11 @@ namespace forumapp.repository.repository
         }
 
         /// <summary>
-        /// Busca um objeto na base a partir de um Id
+        /// Find by Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<TEntity> FindById(int id)
+        public async virtual Task<TEntity> FindById(int id)
         {
             try
             {
@@ -39,10 +39,10 @@ namespace forumapp.repository.repository
         }
 
         /// <summary>
-        /// Lista os objetos na base
+        /// List All
         /// </summary>
         /// <returns></returns>
-        public async Task<ICollection<TEntity>> FindAll()
+        public async virtual Task<ICollection<TEntity>> FindAll()
         {
             try
             {
@@ -53,10 +53,10 @@ namespace forumapp.repository.repository
         }
 
         /// <summary>
-        /// Insere um objeto na base
+        /// Insert
         /// </summary>
         /// <param name="item"></param>
-        public async Task<TEntity> Insert(TEntity item)
+        public async virtual Task<TEntity> Insert(TEntity item)
         {
             try
             {
@@ -72,10 +72,10 @@ namespace forumapp.repository.repository
 
 
         /// <summary>
-        /// Exclui um objeto da base
+        /// Delete
         /// </summary>
         /// <param name="item"></param>
-        public async Task<int> Delete(int id)
+        public async virtual Task<int> Delete(int id)
         {
             try
             {
@@ -95,10 +95,10 @@ namespace forumapp.repository.repository
         }
 
         /// <summary>
-        /// Altera um objeto da base
+        /// Update
         /// </summary>
         /// <param name="item"></param>
-        public async Task<TEntity> Update(TEntity item, int key)
+        public async virtual Task<TEntity> Update(TEntity item, int key)
         {
             try
             {
@@ -121,10 +121,10 @@ namespace forumapp.repository.repository
         }
 
         /// <summary>
-        /// Lista os objetos na base baseado em uma expressão exemplo: c => c.ativo == true
+        /// Find by Expression
         /// </summary>
         /// <returns></returns>
-        public async Task<ICollection<TEntity>> FindAllbyExpression(Expression<Func<TEntity, bool>> predicate)
+        public async virtual Task<ICollection<TEntity>> FindAllbyExpression(Expression<Func<TEntity, bool>> predicate)
         {
             try
             {
@@ -135,7 +135,7 @@ namespace forumapp.repository.repository
         }
 
         /// <summary>
-        /// Liberar os recursos instanciados pela classe DbContext
+        /// Dispose
         /// </summary>
         public void Dispose()
         {

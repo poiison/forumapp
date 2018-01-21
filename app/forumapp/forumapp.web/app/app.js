@@ -16,9 +16,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'mainCtrl'
         })
         .state('topics', {
-            url: "/topics",
+            url: "/topics/:cid",
             templateUrl: '/app/components/topic/topics.html',
-            controller: 'topicsCtrl'
+            controller: 'topicsCtrl',
+            params: {
+                cid: null
+            }
         })
         .state('post', {
             url: "/posts",

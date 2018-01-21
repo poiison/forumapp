@@ -234,3 +234,5 @@ C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\bin\EntityFramework.x
 C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\obj\Debug\forumapp.webapi.csprojResolveAssemblyReference.cache
 C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\obj\Debug\forumapp.webapi.dll
 C:\Projetos\forumsys\forumapp\app\forumapp\forumapp.webapi\obj\Debug\forumapp.webapi.pdb
+C:\projetos\ForumApp\app\forumapp\forumapp.webapi\bin\AutoMapper.dll
+C:\projetos\ForumApp\app\forumapp\forumapp.webapi\bin\AutoMapper.xml
