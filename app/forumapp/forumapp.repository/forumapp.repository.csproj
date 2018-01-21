@@ -72,6 +72,7 @@
     <Compile Include="repository\RepositoryBase.cs" />
     <Compile Include="repository\RepositoryCategory.cs" />
     <Compile Include="repository\RepositoryPost.cs" />
+    <Compile Include="repository\RepositoryUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

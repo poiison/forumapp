@@ -43,13 +43,16 @@
     <Compile Include="ibusiness\IBusinessBase.cs" />
     <Compile Include="ibusiness\IBusinessPost.cs" />
     <Compile Include="ibusiness\IBusinessCategory.cs" />
+    <Compile Include="ibusiness\IBusinessUser.cs" />
     <Compile Include="irepositoy\IRepositoryBase.cs" />
     <Compile Include="irepositoy\IRepositoryCategory.cs" />
     <Compile Include="irepositoy\IRepositoryPost.cs" />
+    <Compile Include="irepositoy\IRepositoryUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\BusinessBase.cs" />
     <Compile Include="services\BusinessCategory.cs" />
     <Compile Include="services\BusinessPost.cs" />
+    <Compile Include="services\BusinessUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\forumapp.entity\forumapp.entity.csproj">
