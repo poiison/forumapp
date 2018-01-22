@@ -15,9 +15,9 @@ namespace forumapp.repository.repository
         {
             if (lsCategory.Count == 0)
             {
-                lsCategory.Add(new dbCategory() { Id = 1, Name = "Development", Description = "Something" });
-                lsCategory.Add(new dbCategory() { Id = 2, Name = "Database", Description = "Something more" });
-                lsCategory.Add(new dbCategory() { Id = 3, Name = "Scripts", Description = "Something less" });
+                lsCategory.Add(new dbCategory() { Id = 1, Name = "Development", Description = "Something" , IdUserCreated= 1});
+                lsCategory.Add(new dbCategory() { Id = 2, Name = "Database", Description = "Something more", IdUserCreated = 1 });
+                lsCategory.Add(new dbCategory() { Id = 3, Name = "Scripts", Description = "Something less", IdUserCreated = 2 });
             }
         }
 

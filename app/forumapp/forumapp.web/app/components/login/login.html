@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
             <div class="form-login">
-                <form>
+                <form >
                     <h4>Welcome</h4>
                     <label class="login-inputs" for="userName">Username</label>
                     <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="Username" ng-model="user.Username" />
@@ -13,7 +13,7 @@
                     <hr />
                     <div class="wrapper">
                         <span class="group-btn">
-                            <a class="btn btn-primary btn-md btn-outline" ng-click="Login()">Login</a>
+                            <button type="submit" class="btn btn-primary btn-md btn-outline" ng-click="Login()">Login</button>
                             <a class="btn btn-warning btn-md btn-outline" ng-click="createNewUser()">Create New User</a>
                         </span>
                     </div>

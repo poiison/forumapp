@@ -40,4 +40,9 @@ app.service("topicService", ['$http', '$window', '$timeout', function ($http, $w
     this.addTopic = function (model) {
         return $http.post(urlBase + "add", model).then(function (response) { return response.data; });
     };
+
+    this.deleteTopic = function (id) {
+        return $http.delete(urlBase + "delete?id=" + id).then(function (response) { return response.data; });
+    };
+    
 }]);

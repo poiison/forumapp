@@ -1,4 +1,4 @@
-﻿var app = angular.module('app', ['ui.router']);
+﻿var app = angular.module('app', ['ui.router', 'ngCookies']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -24,9 +24,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('post', {
-            url: "/posts",
+            url: "/posts/:cid/:pid",
             templateUrl: '/app/components/post/post.html',
-            controller: 'postCtrl'
+            controller: 'postCtrl',
+            params: {
+                cid: null,
+                pid: null
+            }
         });
 
 });

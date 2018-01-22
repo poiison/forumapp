@@ -27,7 +27,7 @@
                             <td class="align-td">
                                 <strong>
                                     <a class="uppercase" ng-click="goToTopics(categs.Id)">{{ categs.Name }} </a>
-                                    <a class="btn-sm" ng-click="deleteCategory(categs.Id)" ng-show="true" title="Delete"><i class="glyphicon glyphicon-remove-sign" style="color:red"></i></a>
+                                    <a class="btn-sm" ng-show="categs.IdUserCreated == user.Id" ng-click="deleteCategory(categs.Id)" title="Delete"><i class="glyphicon glyphicon-remove-sign" style="color:red"></i></a>
                                 </strong>
                                 <br />
                                 <small>{{ categs.Description }}</small>
@@ -63,7 +63,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success btn-outline" ng-click="createNewCategory()">Save</button>
+                    <button type="submit" class="btn btn-success btn-outline" ng-click="createNewCategory()">Save</button>
                     <button type="button" class="btn btn-secondary btn-outline" data-dismiss="modal">Close</button>
                 </div>
             </div>

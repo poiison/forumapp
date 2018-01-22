@@ -9,7 +9,7 @@
 
     <div class="col-md-12">
         <div class="panel panel-default">
-            <!-- Default panel contents -->
+            
             <div class="panel-heading">FORUM APP</div>
 
             <div class="table-responsive">
@@ -21,40 +21,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr ng-show="lsPots != undefined  && lsPots != null && lsPots.length > 0" ng-repeat="post in lsPots">
                             <td>
-                                admin <br />
-                                moderator
+                                {{post.Username}}
                             </td>
                             <td>
-                                <p>Olá,</p>
-
-                                <p>Devido aos inúmeros tópicos desse tipo, este concentrará as solicitações dos users com relação ao assunto.</p>
-
-                                <p>
-                                    Uma dica é: se você consegue entender parte da letra, jogue no Google.<br />
-                                    Ex: "she was a fast machine lyrics" ou "she was a fast machine letra"
-                                </p>
-
-                                <p>"A chave para se encontrar alguma coisa é saber como procurar".</p>
-
-                                <p>Outra dica: baixe o aplicativo Shazam, pra Android ou iPhone que ele descobre as músicas. Eu uso: https://play.google.com/store/apps/details?id=com.shazam.android</p>
-
-                                <p>Abs! ;)</p>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                user <br />
-                                Newbie
-                            </td>
-                            <td>
-                                <p>MauricioBahia</p>
-
-                                <p>Muito obrigado. Foi mais rápido do que esperava.</p>
-
-                                <p>Abs</p>
+                                {{post.Comment}}
                             </td>
                         </tr>
                     </tbody>

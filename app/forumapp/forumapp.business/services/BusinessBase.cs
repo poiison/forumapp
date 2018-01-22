@@ -40,7 +40,7 @@ namespace forumapp.business.services
         /// Listar objetos
         /// </summary>
         /// <returns></returns>
-        public Task<ICollection<TEntity>> FindAll()
+        public virtual Task<ICollection<TEntity>> FindAll()
         {
             try
             {

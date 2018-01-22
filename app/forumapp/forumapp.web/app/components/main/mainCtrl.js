@@ -1,16 +1,17 @@
 ﻿app.controller(
-    'mainCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', 'categoryService','$filter',
-        function ($scope, $http, $rootScope, $log, $location, $window, $state, categoryService, $filter) {
+    'mainCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', 'categoryService', '$filter','$cookieStore',
+        function ($scope, $http, $rootScope, $log, $location, $window, $state, categoryService, $filter, $cookieStore) {
 
             $scope.lsCategories = [];
-            $scope.category = { id: 0, name: '', totaltopics: 0 }
+            $scope.category = { id: 0, name: '', IdUserCreated: 0, totaltopics: 0 }
+            $scope.user = $cookieStore.get('user');
 
             $scope.goToTopics = function (id) {
                 $state.go('topics', {cid: id});
             };
 
             $scope.openModalNewCategory = function () {
-                $scope.category = { id: 0, name: '', totaltopics: 0 };
+                $scope.category = { id: 0, name: '', IdUserCreated: $scope.user.Id, totaltopics: 0 };
 
                 $('#mdl_newcategory').modal('show');
             };

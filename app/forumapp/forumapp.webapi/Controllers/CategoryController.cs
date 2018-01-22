@@ -83,7 +83,7 @@ namespace forumapp.webapi.Controllers
                 if (result > 0)
                     return Ok(result);
                 else
-                    return BadRequest("Sorry, I can't delete this data.");
+                    return BadRequest("Sorry, I can't delete this data for you.");
             }
             catch (Exception e)
             {

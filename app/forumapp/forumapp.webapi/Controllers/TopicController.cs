@@ -54,5 +54,25 @@ namespace forumapp.webapi.Controllers
                 return BadRequest(e.ToString());
             }
         }
+
+        [HttpDelete]
+        [Route("delete")]
+        public async Task<IHttpActionResult> DeleteTopic(int id)
+        {
+            try
+            {
+                var result = await _postBusiness.Delete(id);
+
+                if (result > 0)
+                    return Ok(result);
+                else
+                    return BadRequest("Sorry, I can't delete this data for you.");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.ToString());
+            }
+
+        }
     }
 }

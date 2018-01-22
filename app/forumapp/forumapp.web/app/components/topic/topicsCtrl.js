@@ -1,17 +1,18 @@
 ﻿app.controller(
-    'topicsCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', '$stateParams', 'categoryService', 'topicService',
-        function ($scope, $http, $rootScope, $log, $location, $window, $state, $stateParams, categoryService, topicService) {
+    'topicsCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', '$stateParams', 'categoryService', 'topicService', '$cookieStore',
+        function ($scope, $http, $rootScope, $log, $location, $window, $state, $stateParams, categoryService, topicService, $cookieStore) {
 
             $scope.lsTopics = [];
             $scope.topic = { Id: 0, Title: '', Comment: '', Author: '', Reply: 0, IdCategory: $stateParams.cid, IdUser: 0 }
             $scope.category = { id: 0, name: '', totaltopics: 0 }
+            $scope.user = $cookieStore.get('user');
 
-            $scope.goToTopics = function () {
-                $state.go('post');
+            $scope.goToTopics = function (id) {
+                $state.go('post', { cid: $stateParams.cid, pid: id });
             };
 
             $scope.openModalNewTopic = function () {
-                $scope.topic = { Id: 0, Title: '', Comment: '', Author: '', Reply: 0, IdCategory: $stateParams.cid, IdUser: 0}
+                $scope.topic = { Id: 0, Title: '', Comment: '', Author: '', Reply: 0, IdCategory: $stateParams.cid, IdUser: $scope.user.Id }
 
                 $('#mdl_newtopic').modal('show');
             };
@@ -38,6 +39,8 @@
 
             $scope.createNewTopic = function () {
                 var topic = $scope.topic;
+                topic.Author = $scope.user.Username;
+                topic.User = $scope.user;
 
                 topicService.addTopic(topic).then(
                     function (result) {
@@ -50,7 +53,19 @@
                         console.log(parseErrors(httpError));
                     });
             };
-            
+
+            $scope.deleteTopic = function (id) {
+                
+                topicService.deleteTopic(id).then(
+                    function (result) {
+                        $scope.loadTopics();
+                    })
+                    .catch(function (httpError) {
+                        console.log(httpError.data.Message);
+                    });
+
+            };
+
             $scope.loadCategory();
             $scope.loadTopics();
         }]);
