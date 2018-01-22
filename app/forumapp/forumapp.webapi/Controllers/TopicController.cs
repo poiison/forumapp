@@ -2,6 +2,7 @@
 using forumapp.business.ibusiness;
 using forumapp.entity.db;
 using forumapp.entity.dto;
+using forumapp.webapi.Filters;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -30,6 +31,23 @@ namespace forumapp.webapi.Controllers
                 var result = await _postBusiness.FindAllByLeader(category, 0);
 
                 return Ok(Mapper.DynamicMap<IEnumerable<dbPost>, IEnumerable<PostDto>>(result));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.ToString());
+            }
+        }
+
+        [HttpPost]
+        [Route("add")]
+        [ValidateModelAttribute]
+        public async Task<IHttpActionResult> PostAddTopic(PostDto model)
+        {
+            try
+            {
+                var result = await _postBusiness.Insert(Mapper.DynamicMap<PostDto, dbPost>(model));
+
+                return Ok(Mapper.DynamicMap<dbPost, PostDto>(result));
             }
             catch (Exception e)
             {

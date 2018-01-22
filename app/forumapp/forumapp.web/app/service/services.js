@@ -36,4 +36,8 @@ app.service("topicService", ['$http', '$window', '$timeout', function ($http, $w
     this.getTopics = function (id) {
         return $http.get(urlBase + "topics?category=" + id).then(function (response) { return response.data; });
     };
+
+    this.addTopic = function (model) {
+        return $http.post(urlBase + "add", model).then(function (response) { return response.data; });
+    };
 }]);
