@@ -23,7 +23,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// Busca a partir de um ID.
+        /// Find by Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -37,7 +37,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// Listar objetos
+        /// List All
         /// </summary>
         /// <returns></returns>
         public virtual Task<ICollection<TEntity>> FindAll()
@@ -51,7 +51,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// Inserir um objeto
+        /// Insert
         /// </summary>
         /// <param name="item"></param>
         public Task<TEntity> Insert(TEntity entidade)
@@ -65,7 +65,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// Excluir um objeto
+        /// Delete
         /// </summary>
         /// <param name="item"></param>
         public Task<int> Delete(int entidadeId)
@@ -78,7 +78,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// Alterar um objeto
+        /// Update
         /// </summary>
         /// <param name="item"></param>
         public Task<TEntity> Update(TEntity entidade, int key)
@@ -91,7 +91,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// Lista os objetos na base baseado em uma expressão exemplo: c => c.ativo == true
+        /// Find by Expression
         /// </summary>
         /// <returns></returns>
         public Task<ICollection<TEntity>> FindAllbyExpression(Expression<Func<TEntity, bool>> predicate)

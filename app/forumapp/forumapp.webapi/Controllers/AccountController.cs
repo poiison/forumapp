@@ -25,9 +25,14 @@ namespace forumapp.webapi.Controllers
             _userBusiness = userBusiness;
         }
 
+        /// <summary>
+        /// Login
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("login")]
-        //[ValidateModelAttribute]
+        [ValidateModelAttribute]
         public async Task<IHttpActionResult> PostLogin(UserDto user)
         {
             try

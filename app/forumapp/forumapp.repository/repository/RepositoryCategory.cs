@@ -21,6 +21,10 @@ namespace forumapp.repository.repository
             }
         }
 
+        /// <summary>
+        ///  Return all objects
+        /// </summary>
+        /// <returns></returns>
         public override async Task<ICollection<dbCategory>> FindAll()
         {
             try
@@ -30,7 +34,11 @@ namespace forumapp.repository.repository
             catch (Exception) { throw; }
         }
 
-
+        /// <summary>
+        /// Insert new object
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public override async Task<dbCategory> Insert(dbCategory item)
         {
             try
@@ -45,6 +53,11 @@ namespace forumapp.repository.repository
             catch (Exception) { throw; }
         }
 
+        /// <summary>
+        /// Delete
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public override async Task<int> Delete(int id)
         {
             try
@@ -63,6 +76,11 @@ namespace forumapp.repository.repository
             catch (Exception) { throw; }
         }
 
+        /// <summary>
+        /// Find by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public override async Task<dbCategory> FindById(int id)
         {
             try

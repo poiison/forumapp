@@ -25,6 +25,11 @@ namespace forumapp.webapi.Controllers
             _postBusiness = postBusiness;
         }
 
+        /// <summary>
+        /// Return all posts related to the Id
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("posts")]
         public async Task<IHttpActionResult> GetTopicPosts(int pid)
@@ -41,6 +46,11 @@ namespace forumapp.webapi.Controllers
             }
         }
 
+        /// <summary>
+        /// Add post
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("add")]
         [ValidateModelAttribute]
@@ -58,6 +68,11 @@ namespace forumapp.webapi.Controllers
             }
         }
 
+        /// <summary>
+        /// Delete post
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         [Route("delete")]
         public async Task<IHttpActionResult> DeletePost(int id)

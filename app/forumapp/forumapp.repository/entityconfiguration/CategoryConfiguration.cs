@@ -10,6 +10,9 @@ namespace forumapp.repository.entityconfiguration
 {
     public class CategoryConfiguration : EntityTypeConfiguration<dbCategory>
     {
+        /// <summary>
+        /// Configuration
+        /// </summary>
         public CategoryConfiguration()
         {
             ToTable("Category");

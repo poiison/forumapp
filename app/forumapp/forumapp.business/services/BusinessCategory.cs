@@ -20,7 +20,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// 
+        /// Return all objects
         /// </summary>
         /// <returns></returns>
         public override async Task<ICollection<dbCategory>> FindAll()

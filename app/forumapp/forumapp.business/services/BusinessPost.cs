@@ -22,7 +22,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// 
+        /// Return all posts of a specific category
         /// </summary>
         /// <param name="idCategory"></param>
         /// <param name="reply"></param>
@@ -44,7 +44,7 @@ namespace forumapp.business.services
         }
 
         /// <summary>
-        /// 
+        /// Find all post related to the Id
         /// </summary>
         /// <param name="post"></param>
         /// <returns></returns>

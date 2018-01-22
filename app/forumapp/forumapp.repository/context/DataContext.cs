@@ -21,7 +21,7 @@ namespace forumapp.repository.context
             modelBuilder.Configurations.Add(new CategoryConfiguration());
         }
 
-        //Declaração dos Dbs Ses
+        //Dataset
         public DbSet<dbCategory> Category { get; set; }
 
 
@@ -29,12 +29,12 @@ namespace forumapp.repository.context
         #region ## Controle de Transações
 
         /// <summary>
-        /// Mantém um objeto interno de controle de transação
+        /// Transaction Object
         /// </summary>
         private DbContextTransaction _InnerTransaction;
 
         /// <summary>
-        /// Inicia uma transação com o Entity
+        /// Begins a transaction
         /// </summary>
         public DbContextTransaction BeginTransaction()
         {
@@ -43,7 +43,7 @@ namespace forumapp.repository.context
         }
 
         /// <summary>
-        /// Commit uma transação com o Entity
+        /// Commit transaction
         /// </summary>
         public void Commit()
         {
@@ -69,7 +69,7 @@ namespace forumapp.repository.context
         }
 
         /// <summary>
-        /// Rollback em uma transação do Entity
+        /// Rollback 
         /// </summary>
         public void Rollback()
         {
@@ -91,7 +91,7 @@ namespace forumapp.repository.context
         }
 
         /// <summary>
-        /// Atualiza as referencias das classes
+        /// Refresh
         /// </summary>
         public void RefreshAll()
         {

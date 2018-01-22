@@ -22,7 +22,7 @@ namespace forumapp.repository.repository
         }
 
         /// <summary>
-        /// 
+        /// Find by Id
         /// </summary>
         /// <returns></returns>
         public override async Task<dbUser> FindById(int id)
@@ -35,7 +35,7 @@ namespace forumapp.repository.repository
         }
 
         /// <summary>
-        /// 
+        /// Login
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>

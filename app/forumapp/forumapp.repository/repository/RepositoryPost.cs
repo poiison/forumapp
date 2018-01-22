@@ -27,6 +27,12 @@ namespace forumapp.repository.repository
             }
         }
 
+        /// <summary>
+        /// Return all posts of a specific category
+        /// </summary>
+        /// <param name="idCategory"></param>
+        /// <param name="reply"></param>
+        /// <returns></returns>
         public async Task<ICollection<dbPost>> FindAllByLeader(int idCategory, int reply)
         {
             try
@@ -36,6 +42,11 @@ namespace forumapp.repository.repository
             catch (Exception) { throw; }
         }
 
+        /// <summary>
+        /// Find all post related to the Id
+        /// </summary>
+        /// <param name="post"></param>
+        /// <returns></returns>
         public async Task<ICollection<dbPost>> FindAllByPost(int post)
         {
             try
@@ -45,6 +56,11 @@ namespace forumapp.repository.repository
             catch (Exception) { throw; }
         }
 
+        /// <summary>
+        /// Insert
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public override async Task<dbPost> Insert(dbPost item)
         {
             try
@@ -67,6 +83,11 @@ namespace forumapp.repository.repository
             catch (Exception) { throw; }
         }
 
+        /// <summary>
+        /// Delete
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public override async Task<int> Delete(int id)
         {
             try

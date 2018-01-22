@@ -22,6 +22,10 @@ namespace forumapp.webapi.Controllers
             _categoryBusiness = categoryBusiness;
         }
 
+        /// <summary>
+        /// Return all categories
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("categories")]
         public async Task<IHttpActionResult> GetCategories()
@@ -38,6 +42,11 @@ namespace forumapp.webapi.Controllers
             }
         }
 
+        /// <summary>
+        /// Return categorie by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("category")]
         public async Task<IHttpActionResult> GetCategory(int id)
@@ -55,6 +64,11 @@ namespace forumapp.webapi.Controllers
 
         }
 
+        /// <summary>
+        /// Add new category
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("add")]
         [ValidateModelAttribute]
@@ -72,6 +86,11 @@ namespace forumapp.webapi.Controllers
             }
         }
 
+        /// <summary>
+        /// Delete category
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete]
         [Route("delete")]
         public async Task<IHttpActionResult> DeleteCategories(int id)
