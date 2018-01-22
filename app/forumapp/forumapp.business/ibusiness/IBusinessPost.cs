@@ -10,5 +10,7 @@ namespace forumapp.business.ibusiness
     public interface IBusinessPost : IBusinessBase<dbPost>
     {
         Task<ICollection<dbPost>> FindAllByLeader(int idCategory, int reply);
+
+        Task<ICollection<dbPost>> FindAllByPost(int post);
     }
 }

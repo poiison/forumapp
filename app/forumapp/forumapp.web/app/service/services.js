@@ -44,5 +44,20 @@ app.service("topicService", ['$http', '$window', '$timeout', function ($http, $w
     this.deleteTopic = function (id) {
         return $http.delete(urlBase + "delete?id=" + id).then(function (response) { return response.data; });
     };
+}]);
+
+app.service("postService", ['$http', '$window', '$timeout', function ($http, $window, $timeout) {
+    var urlBase = uriAPI + "post/";
     
+    this.getPosts = function (pid) {
+        return $http.get(urlBase + "posts?pid=" + pid).then(function (response) { return response.data; });
+    };
+
+    this.addPost = function (model) {
+        return $http.post(urlBase + "add", model).then(function (response) { return response.data; });
+    };
+
+    this.deletePost = function (id) {
+        return $http.delete(urlBase + "delete?id=" + id).then(function (response) { return response.data; });
+    };
 }]);

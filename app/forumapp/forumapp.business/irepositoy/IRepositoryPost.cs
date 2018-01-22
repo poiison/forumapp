@@ -13,5 +13,7 @@ namespace forumapp.business.irepositoy
     public interface IRepositoryPost : IRepositoryBase<dbPost>
     {
         Task<ICollection<dbPost>> FindAllByLeader(int idCategory, int reply);
+
+        Task<ICollection<dbPost>> FindAllByPost(int post);
     }
 }

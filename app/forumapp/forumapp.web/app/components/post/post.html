@@ -9,7 +9,7 @@
 
     <div class="col-md-12">
         <div class="panel panel-default">
-            
+
             <div class="panel-heading">FORUM APP</div>
 
             <div class="table-responsive">
@@ -17,16 +17,21 @@
                     <thead>
                         <tr>
                             <th class="col-md-2">&nbsp;</th>
-                            <th class="col-md-10"></th>
+                            <th class="col-md-8"></th>
+                            <th class="col-md-2"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-show="lsPots != undefined  && lsPots != null && lsPots.length > 0" ng-repeat="post in lsPots">
+                        <tr ng-show="lsPots != undefined  && lsPots != null && lsPots.length > 0" ng-repeat="post in lsPots | orderBy:'Id'">
                             <td>
-                                {{post.Username}}
+                                {{post.User.Username}}
                             </td>
                             <td>
-                                {{post.Comment}}
+                                <p>{{post.Title}}</p>
+                                <p>{{post.Comment}}</p>
+                            </td>
+                            <td class="text-center">
+                                <span ng-show="post.IdUser == user.Id"><a ng-click="editPost(post.Id)">Edit</a> |  <a ng-click="deletePost(post.Id)">Remove</a></span>
                             </td>
                         </tr>
                     </tbody>
@@ -34,4 +39,19 @@
             </div>
         </div>
     </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <textarea class="form-control" rows="5" id="mdl_topicComment" ng-model="newpost.Comment"></textarea>
+                </form>
+            </div>
+            <div class="panel-footer pull-right">
+                <button type="button" class="btn btn-success btn-outline" ng-click="createNewPost()">Save</button>
+            </div>
+        </div>
+    </div>
+    <p>
+        &nbsp;
+    </p>
 </div>
