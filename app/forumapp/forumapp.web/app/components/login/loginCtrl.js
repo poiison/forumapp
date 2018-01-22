@@ -1,6 +1,6 @@
 ﻿app.controller(
-    'loginCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', 'accountService', '$cookieStore',
-        function ($scope, $http, $rootScope, $log, $location, $window, $state, accountService, $cookieStore) {
+    'loginCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', 'accountService', '$cookieStore', 'Notification',
+        function ($scope, $http, $rootScope, $log, $location, $window, $state, accountService, $cookieStore, Notification) {
 
             $scope.user = { id: 0, Username: '', Password: '' }
 
@@ -12,6 +12,9 @@
                         $state.go('main');
                     })
                     .catch(function (httpError) {
+                        Notification.error({ message: 'User or password incorrect.' });
+                        console.log(httpError);
+
                         console.log(parseErrors(httpError));
                     });
             };

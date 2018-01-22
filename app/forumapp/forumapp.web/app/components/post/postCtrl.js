@@ -9,6 +9,7 @@
             $scope.newpost = { Id: 0, Title: '', Comment: '', Author: '', Reply: $stateParams.pid, IdCategory: $stateParams.cid, IdUser: $scope.user.Id }
 
             $scope.category = { id: 0, name: '', totaltopics: 0 }
+            $scope.cid = $stateParams.cid;
 
 
             $scope.loadCategory = function () {
@@ -64,6 +65,11 @@
                     .catch(function (httpError) {
                         console.log(httpError.data.Message);
                     });
+            };
+
+            $scope.logout = function () {
+                $cookieStore.remove('user');
+                $state.go('home');
             };
 
             $scope.loadPosts();

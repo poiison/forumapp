@@ -1,48 +1,39 @@
 ﻿<div class="container top" ng-controller="loginCtrl">
     <div class="row">
-        <div class="col-md-offset-5 col-md-3">
+        <div class="col-md-offset-3 col-md-3">
             <div class="form-login">
-                <form >
+                <form>
                     <h4>Welcome</h4>
                     <label class="login-inputs" for="userName">Username</label>
                     <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="Username" ng-model="user.Username" />
-                    </br>
+                    <br />
                     <label class="login-inputs" for="userPassword">Password</label>
                     <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="Password" ng-model="user.Password" />
-                    </br>
+                    <br />
                     <hr />
                     <div class="wrapper">
                         <span class="group-btn">
                             <button type="submit" class="btn btn-primary btn-md btn-outline" ng-click="Login()">Login</button>
-                            <a class="btn btn-warning btn-md btn-outline" ng-click="createNewUser()">Create New User</a>
                         </span>
                     </div>
                 </form>
             </div>
         </div>
-    </div>
-
-    <div id="mdl_newuser" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content modal-gray">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">New User</h4>
-                </div>
-                <div class="modal-body">
-                    <form class="form-horizontal">
-                        <label class="login-inputs"  for="mdl_userName">Username</label>
-                        <input type="text" id="mdl_userName" class="form-control input-sm chat-input" placeholder="Username" />
-                        <br />
-                        <label class="login-inputs"  for="mdl_userPassword">Password</label>
-                        <input type="text" id="mdl_userPassword" class="form-control input-sm chat-input" placeholder="Password" />
-                        <br />
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success btn-outline">Save</button>
-                    <button type="button" class="btn btn-secondary btn-outline" data-dismiss="modal">Close</button>
-                </div>
+        <div class="col-md-3">
+            <div class="form-login">
+                <h4>Users</h4>
+                <p>
+                    <label class="login-inputs" for="userName">User: User1</label>
+                    <br />
+                    <label class="login-inputs" for="userName">Password: User1</label>
+                </p>
+                <br />
+                <p>
+                    <label class="login-inputs" for="userPassword">User: User2</label>
+                    <br />
+                    <label class="login-inputs" for="userPassword">Password:  User2</label>
+                </p>
+                <br />
             </div>
         </div>
     </div>

@@ -66,6 +66,11 @@
 
             };
 
+            $scope.logout = function () {
+                $cookieStore.remove('user');
+                $state.go('home');
+            };
+
             $scope.loadCategory();
             $scope.loadTopics();
         }]);

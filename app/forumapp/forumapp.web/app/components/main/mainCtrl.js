@@ -1,6 +1,6 @@
 ﻿app.controller(
-    'mainCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', 'categoryService', '$filter','$cookieStore',
-        function ($scope, $http, $rootScope, $log, $location, $window, $state, categoryService, $filter, $cookieStore) {
+    'mainCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', 'categoryService', '$filter', '$cookieStore', 'Notification',
+        function ($scope, $http, $rootScope, $log, $location, $window, $state, categoryService, $filter, $cookieStore, Notification) {
 
             $scope.lsCategories = [];
             $scope.category = { id: 0, name: '', IdUserCreated: 0, totaltopics: 0 }
@@ -59,5 +59,10 @@
                 }
             };
 
+            $scope.logout = function () {
+                $cookieStore.remove('user');
+                $state.go('home');
+            };
+            
             $scope.loadCategires();
         }]);

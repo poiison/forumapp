@@ -85,6 +85,7 @@
     <Content Include="css\bootstrap\bootstrap.css" />
     <Content Include="css\bootstrap\bootstrap.min.css" />
     <Content Include="css\local\web.css" />
+    <Content Include="css\notification\angular-ui-notification.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -892,6 +893,7 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="index.html" />
+    <Content Include="scripts\notification\angular-ui-notification.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
