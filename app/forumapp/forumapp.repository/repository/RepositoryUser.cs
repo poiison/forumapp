@@ -21,6 +21,24 @@ namespace forumapp.repository.repository
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override async Task<dbUser> FindById(int id)
+        {
+            try
+            {
+                return await Task.FromResult(lsUser.Where(x=>x.Id == id).FirstOrDefault());
+            }
+            catch (Exception) { throw; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public async Task<dbUser> Login(dbUser user)
         {
             try

@@ -19,6 +19,7 @@ namespace forumapp.webapi.Ioc
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
             kernel.Bind<IRepositoryPost>().To<RepositoryPost>();
             kernel.Bind<IRepositoryCategory>().To<RepositoryCategory>();
+            kernel.Bind<IRepositoryUser>().To<RepositoryUser>();
         }
     }
 }

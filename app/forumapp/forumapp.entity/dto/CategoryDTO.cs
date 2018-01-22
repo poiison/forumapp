@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace forumapp.entity.vm
+namespace forumapp.entity.dto
 {
     public class CategoryDto
     {

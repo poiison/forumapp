@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using forumapp.business.ibusiness;
 using forumapp.entity.db;
-using forumapp.entity.vm;
+using forumapp.entity.dto;
 using forumapp.webapi.Filters;
 using System;
 using System.Collections.Generic;

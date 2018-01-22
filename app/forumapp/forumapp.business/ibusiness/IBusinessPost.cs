@@ -9,10 +9,6 @@ namespace forumapp.business.ibusiness
 {
     public interface IBusinessPost : IBusinessBase<dbPost>
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        Task<string> GetPostName();
+        Task<ICollection<dbPost>> FindAllByLeader(int idCategory, int reply);
     }
 }

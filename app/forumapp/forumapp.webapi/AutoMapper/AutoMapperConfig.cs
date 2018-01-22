@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
 using forumapp.entity.db;
-using forumapp.entity.vm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using forumapp.entity.dto;
 
 namespace forumapp.webapi.AutoMapper
 {
@@ -34,6 +30,8 @@ namespace forumapp.webapi.AutoMapper
             protected override void Configure()
             {
                 CreateMap<dbCategory, CategoryDto>();
+                CreateMap<dbPost, PostDto>();
+                CreateMap<dbUser, UserDto>();
             }
         }
 
@@ -45,6 +43,8 @@ namespace forumapp.webapi.AutoMapper
             protected override void Configure()
             {
                 CreateMap<CategoryDto, dbCategory>();
+                CreateMap<PostDto, dbPost>();
+                CreateMap<UserDto, dbUser>();
             }
         }
     }

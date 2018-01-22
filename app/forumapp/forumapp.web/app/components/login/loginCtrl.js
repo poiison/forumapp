@@ -1,13 +1,22 @@
 ﻿app.controller(
-    'loginCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window','$state',
-function ($scope, $http, $rootScope, $log, $location, $window, $state) {
+    'loginCtrl', ['$scope', '$http', '$rootScope', '$log', '$location', '$window', '$state', 'accountService',
+        function ($scope, $http, $rootScope, $log, $location, $window, $state, accountService) {
 
-    $scope.Login = function () {
-        $state.go('main');
-    };
+            $scope.user = { id: 0, Username: '', Password: '' }
 
-    $scope.createNewUser = function () {
-        $('#mdl_newuser').modal('show');
-    };
+            $scope.Login = function () {
 
-}]);
+                accountService.login($scope.user).then(
+                    function (result) {
+                        $state.go('main');
+                    })
+                    .catch(function (httpError) {
+                        console.log(parseErrors(httpError));
+                    });
+            };
+
+            $scope.createNewUser = function () {
+                $('#mdl_newuser').modal('show');
+            };
+
+        }]);

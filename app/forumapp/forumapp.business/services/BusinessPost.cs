@@ -12,24 +12,29 @@ namespace forumapp.business.services
     public class BusinessPost : BusinessBase<dbPost>, IBusinessPost
     {
         private readonly IRepositoryPost _postRepository;
+        private readonly IRepositoryUser _userRepository;
 
-        public BusinessPost(IRepositoryPost postRepository) 
+        public BusinessPost(IRepositoryPost postRepository, IRepositoryUser userRepository) 
             : base(postRepository)
         {
             _postRepository = postRepository;
+            _userRepository = userRepository;
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public async Task<string> GetPostName()
+        
+        public async Task<ICollection<dbPost>> FindAllByLeader(int idCategory, int reply)
         {
             try
             {
-                return _postRepository.GetPostName().Result;
+                var lsTopics = _postRepository.FindAllByLeader(idCategory, reply).Result;
+
+                foreach (var item in lsTopics)
+                {
+                    item.User = await _userRepository.FindById(item.IdUser);
+                }
+                
+                return lsTopics;
             }
-            catch (Exception e) { throw; }
+            catch (Exception) { throw; }
         }
     }
 }

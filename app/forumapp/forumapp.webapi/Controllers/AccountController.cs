@@ -27,7 +27,7 @@ namespace forumapp.webapi.Controllers
 
         [HttpPost]
         [Route("login")]
-        [ValidateModelAttribute]
+        //[ValidateModelAttribute]
         public async Task<IHttpActionResult> PostLogin(UserDto user)
         {
             try

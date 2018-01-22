@@ -21,15 +21,7 @@ namespace forumapp.webapi.Controllers
         {
             _postBusiness = postBusiness;
         }
-
-        [HttpGet]
-        [Route("getposts")]
-        public async Task<IHttpActionResult> GetPosts()
-        {
-            var result = await _postBusiness.GetPostName();
-
-            return Ok(result);
-        }
+        
     }
 
 }

@@ -27,11 +27,11 @@
                         <tr ng-show="lsTopics != undefined  && lsTopics != null && lsTopics.length > 0" ng-repeat="tops in lsTopics">
                             <td class="align-td">
                                 <strong>
-                                    <a class="uppercase" ng-click="goToTopics(tops.id)">{{ tops.name }} </a>
+                                    <a class="uppercase" ng-click="goToTopics(tops.Id)">{{ tops.Title }}</a>
                                     <a class="btn-sm" ng-click="deleteTopic()" ng-show="true" title="Delete"><i class="glyphicon glyphicon-remove-sign" style="color:red"></i></a>
                                 </strong>
                             </td>
-                            <td class="align-td">admin</td>
+                            <td class="align-td">{{ tops.User.Username }}</td>
 
                         </tr>
                         <tr ng-show="lsTopics == undefined  || lsTopics == null || lsTopics.length == 0">
